@@ -18,4 +18,9 @@ class Conversation extends Model
     {
         return $this->hasMany(Message::class, 'conversation_id', 'conversation_id');
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
